@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF309EB3-2EF7-4B79-ACF6-C1396890365B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AsyncRun</RootNamespace>
+    <AssemblyName>AsyncRun</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PointBlank 26.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Create_Clan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_Clan.Designer.cs">
+      <DependentUpon>Create_Clan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\equip_inventory.cs" />
+    <Compile Include="Enums\Exception_Channel_Type.cs" />
+    <Compile Include="Enums\Chat_Type.cs" />
+    <Compile Include="Enums\Connection_type.cs" />
+    <Compile Include="Enums\ControlEnum.cs" />
+    <Compile Include="Enums\Exception_Clan.cs" />
+    <Compile Include="Enums\LoginAcess.cs" />
+    <Compile Include="Enums\PlayerVIP.cs" />
+    <Compile Include="Enums\Regions.cs" />
+    <Compile Include="Enums\Exception_Servers_Type.cs" />
+    <Compile Include="Model\ClanWork.cs" />
+    <Compile Include="Model\GetSession.cs" />
+    <Compile Include="Model\Patente.cs" />
+    <Compile Include="Personal.cs" />
+    <Compile Include="Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logger.cs" />
+    <Compile Include="LoggerXML.cs" />
+    <Compile Include="Mail.cs" />
+    <Compile Include="Model\Room.cs" />
+    <Compile Include="Model\WeaponWork.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="protocol\Auth\ACK\BASE_CLIENT_URL_ACK.cs" />
+    <Compile Include="protocol\Auth\ACK\BASE_INVENTORY_ACK.cs" />
+    <Compile Include="protocol\Auth\ACK\BASE_USER_GIFTLIST_ACK.cs" />
+    <Compile Include="protocol\Game\ACK\LOBBY_JOIN_ROOM_ACK.cs" />
+    <Compile Include="protocol\Auth\REQ\BASE_CLIENT_URL_REQ.cs" />
+    <Compile Include="protocol\Auth\REQ\BASE_INVENTORY_REQ.cs" />
+    <Compile Include="protocol\Auth\REQ\BASE_UNK_REQ.cs" />
+    <Compile Include="protocol\Auth\REQ\BASE_USER_GIFT_LIST_REQ.cs" />
+    <Compile Include="protocol\GameClient.cs" />
+    <Compile Include="protocol\Game\ACK\BASE_BUG_ACK.cs" />
+    <Compile Include="protocol\Game\ACK\BASE_EXIT_GAME_ACK.cs" />
+    <Compile Include="protocol\Game\ACK\CLAN_CREATE_ACK.cs" />
+    <Compile Include="protocol\Game\ACK\ROOM_GET_LOBBY_USER_LIST_ACK.cs" />
+    <Compile Include="protocol\Game\ACK\ROOM_INVITES_PLAYERS_ACK.cs" />
+    <Compile Include="protocol\Game\REQ\BASE_CHAT_ROOM_REQ.cs" />
+    <Compile Include="protocol\Game\REQ\CLAN_CREATE_REQ.cs" />
+    <Compile Include="protocol\Game\REQ\ROOM_GET_LOBBY_USER_LIST_REQ.cs" />
+    <Compile Include="protocol\Game\REQ\SERVER_MESSAGE_ANNOUNCE_REQ.cs" />
+    <Compile Include="protocol\SyncPackage.cs" />
+    <Compile Include="protocol\Game\ACK\BASE_CHANNEL_PASSWRD_ACK.cs" />
+    <Compile Include="protocol\Game\ACK\BASE_CREATE_ROOM_ACK.cs" />
+    <Compile Include="protocol\Auth\ACK\BASE_EXIT_GAME_ACK.cs" />
+    <Compile Include="protocol\Auth\ACK\BASE_GET_CONFIG_ACK.cs" />
+    <Compile Include="protocol\Auth\ACK\BASE_GET_ENTER_SERVER_ACK.cs" />
+    <Compile Include="protocol\Auth\ACK\BASE_GET_LOGIN_ACK.cs" />
+    <Compile Include="protocol\Auth\ACK\BASE_GET_MYINFO_ACK.cs" />
+    <Compile Include="protocol\Auth\ACK\BASE_GET_SOURCE_ACK.cs" />
+    <Compile Include="protocol\Auth\ACK\BASE_GET_UNKNOWN_ACK.cs" />
+    <Compile Include="protocol\Auth\ACK\BASE_GET_USER_ENTER_ACK.cs" />
+    <Compile Include="protocol\Game\ACK\CLAN_CLIENT_LIST_ACK.cs" />
+    <Compile Include="protocol\Game\ACK\LOBBY_GET_ROOMLIST_ACK.cs" />
+    <Compile Include="protocol\Game\REQ\BASE_CHANNEL_PASSWRD_REQ.cs" />
+    <Compile Include="protocol\Auth\REQ\BASE_GET_ENTER_SERVER_REQ.cs" />
+    <Compile Include="protocol\Auth\REQ\BASE_GET_LOGIN_ERROR_REQ.cs" />
+    <Compile Include="protocol\Auth\REQ\BASE_GET_LOGIN_REQ.cs" />
+    <Compile Include="protocol\Auth\REQ\BASE_GET_MYCASH_REQ.cs" />
+    <Compile Include="protocol\Auth\REQ\BASE_GET_MYINFO_REQ.cs" />
+    <Compile Include="protocol\Auth\REQ\BASE_GET_SCHANNEL_LIST_REQ.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="protocol\ClinitProcess.cs" />
+    <Compile Include="protocol\AuthClient.cs" />
+    <Compile Include="protocol\Game\ACK\BASE_CHANNEL_ANNOUNCE_ACK.cs" />
+    <Compile Include="protocol\Game\ACK\BASE_USER_ENTER_ACK.cs" />
+    <Compile Include="protocol\Game\ACK\CAMPO_MINADO.cs" />
+    <Compile Include="protocol\Game\ACK\FLOOD_PACKET_BUFFER.cs" />
+    <Compile Include="protocol\Game\ACK\LOBBY_CHATTING_ACK.cs" />
+    <Compile Include="protocol\Game\ACK\LOBBY_CREATE_NICK_NAME_ACK.cs" />
+    <Compile Include="protocol\Game\ACK\LOBBY_ENTER_ACK.cs" />
+    <Compile Include="protocol\Game\ACK\LOBBY_SHOP_LIST_ACK.cs" />
+    <Compile Include="protocol\Game\REQ\BASE_CHANNEL_ANNOUNCE_REQ.cs" />
+    <Compile Include="protocol\Game\REQ\BASE_GET_SCHANNEL_LIST_REQ.cs" />
+    <Compile Include="protocol\Game\REQ\BASE_CREATE_ROOM_REQ.cs" />
+    <Compile Include="protocol\Game\REQ\BASE_USER_ENTER_REQ.cs" />
+    <Compile Include="protocol\Game\REQ\FRIEND_INFO_REQ.cs" />
+    <Compile Include="protocol\Game\REQ\LOBBY_CHATTING_REQ.cs" />
+    <Compile Include="protocol\Game\REQ\LOBBY_CREATE_NICK_NAME_REQ.cs" />
+    <Compile Include="protocol\Game\REQ\LOBBY_ENTER_REQ.cs" />
+    <Compile Include="protocol\Game\REQ\LOBBY_GET_ROOMLIST_REQ.cs" />
+    <Compile Include="Loader.cs" />
+    <Compile Include="LoggerConfig.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="protocol\Game\REQ\LOBBY_SHOP_LIST_REQ.cs" />
+    <Compile Include="protocol\Game\REQ\ROOM_INVITE_SHOW_REQ.cs" />
+    <Compile Include="protocol\ReadPacket.cs" />
+    <Compile Include="protocol\SendPacket.cs" />
+    <Compile Include="protocol\Util.cs" />
+    <Compile Include="RoomCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomCreate.Designer.cs">
+      <DependentUpon>RoomCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SocketComponets.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\app.manifest" />
+    <Compile Include="protocol\Game\ACK\BASE_FRIEND_INVITE.ACK.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PointBlank 26.ico" />
+    <Content Include="PointBlank-icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Create_Clan.resx">
+      <DependentUpon>Create_Clan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomCreate.resx">
+      <DependentUpon>RoomCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
